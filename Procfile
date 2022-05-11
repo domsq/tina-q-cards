@@ -1,0 +1,1 @@
+web: gunicorn tina_q_cards.wsgi
