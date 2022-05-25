@@ -16,14 +16,45 @@ body {
     width: 1.5rem;
 }
 
+/* Header */
+
 .logo-font {
     text-transform: uppercase;
-    font-family: 'Knewave', cursive;
+    font-family: 'Corben', cursive;
+    color: #AB274F;
 }
 
 .main-logo-link {
     width: fit-content;
 }
+
+.bg-large-header {
+    background: #CA9FB5;
+}
+
+.bg-nav {
+    background: white;
+}
+
+.nav-item a {
+    color: #A16484 !important;
+}
+
+.btn-red {
+    background: #AB274F;
+}
+
+.btn-red:hover,
+.btn-red:active,
+.btn-red:focus {
+    background: #CA9FB5;
+}
+
+.bg-darker {
+    background: #54424B;
+}
+
+/* Homepage */
 
 .shop-button {
     background: black;
@@ -76,4 +107,16 @@ body {
     .header-container {
         padding-top: 164px;
     }
+   
+}
+
+@media (max-width: 991px) {
+    .bg-nav {
+        background: #CA9FB5;
+    }
+
+    .nav-item a {
+    color: black !important;
+}
+
 }
