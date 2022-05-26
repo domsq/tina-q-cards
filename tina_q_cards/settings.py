@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import dj_database_url
 
+development = os.environ.get('DEVELOPMENT', False)
+
 if os.path.isfile("env.py"):
     import env
 
@@ -31,7 +33,7 @@ ALLAUTH_DIR = os.path.join(BASE_DIR, 'templates', 'allauth')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = development
 
 ALLOWED_HOSTS = ["tina-q-cards.herokuapp.com", "localhost"]
 
