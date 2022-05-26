@@ -63,7 +63,22 @@ body {
 
 .clear {
     clear: both;
-    height: 200px;
+    height: 280px;
+}
+
+.footer-icon {
+    font-size: 2.4rem;
+}
+
+.footer-link a {
+    color: #AB274F !important;
+    text-decoration: none;
+}
+
+.footer-link a:hover,
+.footer-link a:active,
+.footer-link a:focus {
+    color: #CA9FB5 !important;
 }
 
 /* Homepage */
