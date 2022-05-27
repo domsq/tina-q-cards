@@ -59,9 +59,13 @@ body {
     width: 125px;
 }
 
+.font-large {
+    font-size: 1.2rem;
+}
+
 /* Footer */
 
-.clear {
+.footer-clear {
     clear: both;
     height: 280px;
 }
@@ -79,6 +83,16 @@ body {
 .footer-link a:active,
 .footer-link a:focus {
     color: #CA9FB5 !important;
+}
+
+.dark-font {
+    color: #54424B !important;
+}
+
+/* Mailchimp */
+
+#mc_embed_signup {    
+    padding: 0;
 }
 
 /* Homepage */

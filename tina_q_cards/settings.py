@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = ["tina-q-cards.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ['localhost', 'tina-q-cards.herokuapp.com']
 
 
 # Application definition
@@ -78,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
