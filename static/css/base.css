@@ -7,6 +7,10 @@ body {
     height: calc(100vh - 164px);
 }
 
+.header-container {
+    padding-top: 248px;
+}
+
 /* Taken from Bulma */
 .icon {
     align-items: center;
@@ -65,11 +69,6 @@ body {
 
 /* Footer */
 
-.footer-clear {
-    clear: both;
-    height: 280px;
-}
-
 .footer-icon {
     font-size: 2.4rem;
 }
@@ -98,9 +97,16 @@ body {
 /* Homepage */
 
 .shop-button {
-    background: black;
+    background: #AB274F;
     color: white;
     min-width: 260px;
+}
+
+.shop-button:hover,
+.shop-button:active,
+.shop-button:focus {
+    background: #CA9FB5;
+    color: white;    
 }
 
 .btn-black {
@@ -108,9 +114,6 @@ body {
     color: white;
 }
 
-.shop-button:hover,
-.shop-button:active,
-.shop-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -126,29 +129,13 @@ body {
     border: 1px solid black !important;
 }
 
-/* -------------------------------- Media Queries */
+/* Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
   }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-   
 }
 
 @media (max-width: 992px) {
