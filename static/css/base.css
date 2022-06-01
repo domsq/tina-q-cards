@@ -212,7 +212,7 @@ body {
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
-  }
+    }
 }
 
 @media (max-width: 992px) {
@@ -222,6 +222,11 @@ body {
 
     .nav-item a {
     color: black !important;
-}
+    }
+
+    .nav-link {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
 
 }
