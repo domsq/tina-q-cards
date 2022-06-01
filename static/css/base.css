@@ -206,6 +206,10 @@ body {
 	color: #17a2b8; /* text-info */
 }
 
+.allauth-form-inner-content h2 {
+    font-size: 1.5rem;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
