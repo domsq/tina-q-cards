@@ -108,6 +108,8 @@ Contact us page:<br>
 
 - As a site user I can browse through products so that I can decide what I may be interested in buying
 - As a site user I can look at product details so that I can decide whether I would like to buy it
+- As a site user I can search for products so that I have another way of looking for items
+- As a site user I can sort products on criteria such as category or price so that I have a method of ordering the products as I prefer
 - As a site user I can add products I want to purchase to a basket so that I may then decide whether to purchase them or not
 - As a site user I can view the contents of my shopping basket so that I can make any adjustments to it
 - As a site user I can perform a checkout on my shopping basket so that I can create an order
