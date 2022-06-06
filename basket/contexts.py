@@ -1,10 +1,28 @@
+from django.shortcuts import get_object_or_404
+from products.models import Product
+
+
 def basket_contents(request):
-    """ Basket tool to calculate grand total """
+    """
+    Tools to calculate grand total and
+    allow updating of the basket
+    """
 
     basket_items = []
     total = 0
     product_count = 0
     delivery = 0
+    basket = request.session.get('basket', {})
+
+    for item_id, quantity in basket.items():
+        product = get_object_or_404(Product, pk=item_id)
+        total += quantity * product.price
+        product_count += quantity
+        basket_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
 
     grand_total = delivery + total
 
