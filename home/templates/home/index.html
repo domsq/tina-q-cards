@@ -12,10 +12,11 @@
 <div class="container h-100">
     <div class="row h-100">
         <div class="col-12 my-auto text-center">
-            {% for message in messages %}
-            <h2 class="logo-font text-black">{{ message.title }}</h2>
-            <p class="mt-5">{{ message.body }}</p>
-            {% endfor %}
+            <!-- Adjusted homepage to render the welcome text directly instead of pulling from WelcomeMessage model, as discussed with mentor -->
+            <h2 class="logo-font text-black">Welcome to Tina Q Cards!</h2>
+            <p class="mt-5">Please have a look through our selection of greeting cards, if you don't see quite what
+                you're looking for, drop us a message via our Facebook page or the Contact Us section. All orders
+                include free delivery.</p>            
             <div class="my-5">
                 <h4>
                     <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">
