@@ -25,7 +25,7 @@ def checkout(request):
     intent = stripe.PaymentIntent.create(
         amount=stripe_total,
         currency=settings.STRIPE_CURRENCY,
-    )    
+    )
 
     order_form = OrderForm()
 
