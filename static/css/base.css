@@ -3,8 +3,14 @@ html {
 }
 
 body {    
+    background: url('/media/tqc-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
     height: calc(100vh - 164px);
+}
+
+.bg-white {
+    background-color: white;
 }
 
 .header-container {
@@ -154,6 +160,11 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+p.mt-5 {
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* Allauth form formatting */
