@@ -12,4 +12,4 @@ def view_blog(request):
         'posts': posts,
     }
 
-    return render(request, context, template)
+    return render(request, template, context)
