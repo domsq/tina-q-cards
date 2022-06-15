@@ -4,7 +4,8 @@ from django.db import models
 class WelcomeMessage(models.Model):
     """Schema for the WelcomeMessage model"""
 
-    verbose_name_plural = 'WelcomeMessage'
+    class Meta:
+        verbose_name_plural = 'WelcomeMessage'
 
     title = models.CharField(max_length=200)
     body = models.TextField()
