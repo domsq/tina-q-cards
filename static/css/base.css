@@ -357,4 +357,8 @@ a.category-badge > span.badge:hover {
         padding: .25rem .5rem !important;
     }
 
+    ul.mb-0 {
+        padding-left: 0px;
+    }
+
 }
