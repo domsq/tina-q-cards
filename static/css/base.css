@@ -251,7 +251,7 @@ a.category-badge > span.badge:hover {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 105px;
     right: 15px;
     z-index: 999999;
 }
@@ -328,6 +328,10 @@ a.category-badge > span.badge:hover {
     .bg-nav {
         background: #CA9FB5;
     }
+
+    .message-container {    
+        top: 200px;    
+        }
 
     .nav-item a {
     color: black !important;
