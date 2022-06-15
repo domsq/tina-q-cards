@@ -8,6 +8,7 @@ def home(request):
     return render(request, 'home/index.html')
 
 
+# add view to show privacy policy as discussed with mentor
 def privacy_policy(request):
     """ View to render privacy policy page """
 
