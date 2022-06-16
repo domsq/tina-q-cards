@@ -1,6 +1,8 @@
 # Tina Q Cards
 
-Tina Q Cards is a website selling bespoke handmade greeting cards for occasions such as birthdays, anniversaries, get well soon and so on. Users are able to browse the selection of cards and purchase any they like the look of. They can also send a message requesting cards to be made to requirements. Users will be able to look at previous orders and update their contact details if they register an account. 
+Tina Q Cards is a website selling bespoke handmade greeting cards for occasions such as birthdays, anniversaries, get well soon and so on. Users are able to browse the selection of cards and purchase any they like the look of. They can also send a message requesting cards to be made to requirements. Users will be able to look at previous orders and update their delivery details if they register an account. 
+
+![Image of application pages on different screen sizes](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/am_i_responsive.JPG)<br>
 
 [Link to deployed site](https://tina-q-cards.herokuapp.com/)
 
@@ -8,15 +10,19 @@ Tina Q Cards is a website selling bespoke handmade greeting cards for occasions 
 
 ### Imagery
 
- 
+ My application features a simple background image showing some texture on the homepage. The other images present are those for the products. I also make use of Font Awesome icons for some additional visual flourish.
 
 ### Typography
 
-
+The fonts used in my application are "Corben" for any heading type text and "Montserrat" for any remaining content. These come from Google Fonts. 
 
 ### Colour scheme
 
+The colour scheme is based around darker pink and red colours (#AB274F, #CA9FB5, #A16484) with a very dark purple colour used for certain backgrounds and also for some button elements (#54424B). The palette for this was determined using [mycolor.space](https://mycolor.space/?hex=%23AB274F&sub=1) and is known as the "Neighbor Palette":
 
+![Image of colour palette](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/colour_palette.JPG)<br>
+
+The colour #AB274F has also been used for certain button elements and for various headings. It is the primary colour for the site with the other colours used to support it. 
 
 ### Schema
 
@@ -124,7 +130,7 @@ Contact us page:<br>
 - As a site admin I can view created orders so that they may be fulfilled, or amended if needs be
 - As a site admin I can view messages submitted via the contact us section so that I may act upon them
 - As a site admin I can manage the welcome message text that displays on the Homepage so that I can update it if required
-- As a site admin I can manage the content on the “About Us” page so that it can be amended if needed
+- As a site admin I can manage the content on the “Tina's Blog” page so that it can be amended if needed
 
 #### Returning users:
 
@@ -133,7 +139,7 @@ Contact us page:<br>
 - As a returning site admin I can see whether any new messages have been submitted so that I can action them accordingly
 - As a returning site admin I can look at whether any new orders have been placed so that I can fulfill or amend them as required
 - As a returning site admin I can update the welcome message text so that any changes to it can be made
-- As a returning site admin I can update the "About Us" page content so that any required changes to it are reflected
+- As a returning site admin I can update the "Tina's Blog" page content so that any required changes to it are reflected
 
 #### Frequent users:
 
