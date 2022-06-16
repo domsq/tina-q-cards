@@ -30,6 +30,28 @@ The schema overview for my application is as below:
 
 ![Image of schema overview](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/schema.JPG)<br>
 
+The details for each model are as follows:
+
+#### Blog app:
+
+- BlogPost<br>
+![Image of blogpost model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/blogpost_model.JPG)
+
+#### Checkout app:
+
+- Order<br>
+![Image of order model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/order_model.JPG)
+
+- OrderLineItem<br>
+![Image of orderlineitem model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/orderlineitem_model.JPG)
+
+#### ContactUs app:
+
+- ContactUs<br>
+![Image of contactus model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/contactus_model.JPG)
+
+
+
 ### Wireframes
 
 The wireframes for my website are as follows:
