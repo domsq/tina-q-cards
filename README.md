@@ -579,6 +579,7 @@ Background image from [unsplash.com](https://unsplash.com/photos/nipbRVoEp18?utm
 
 In addition to the content from the LMS, and in particular the Boutique Ado walkthrough project which provided me with guidance and inspiration for my project, I made use of the following resources:
 
+- https://www.youtube.com/watch?v=VADHdoPwKtw&t=134s
 - https://docs.djangoproject.com/en/4.0/ref/settings/
 - https://stackoverflow.com/questions/3346230/wrap-long-lines-in-python
 - https://docs.djangoproject.com/en/4.0/ref/views/#the-404-page-not-found-view
