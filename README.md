@@ -30,14 +30,19 @@ The schema overview for my application is as below:
 
 ![Image of schema overview](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/schema.JPG)<br>
 
+As seen above, the Category table has a one-to-many link with Product as one category can contain many products.
+The Order table has a one-to-many link with OrderLineItem, as one order can contain many line items. There is also a one-to-many link between Product and OrderLineItem as the same product can appear in many line items on different orders.<br><br>
+There is a one-to-many relationship between UserProfile and Order as one user can have many orders associated with them. The UserProfile table also has a one-to-one link with the built-in Django User model (shown here for demonstration purposes) as each user can have only one profile linked to them.
+The ContactUs, WelcomeMessage and BlogPost tables are standalone with no links to any other tables. 
+
 The details for each model are as follows:
 
-#### Blog app:
+#### Blog app
 
 - BlogPost<br>
 ![Image of blogpost model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/blogpost_model.JPG)
 
-#### Checkout app:
+#### Checkout app
 
 - Order<br>
 ![Image of order model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/order_model.JPG)
@@ -45,12 +50,56 @@ The details for each model are as follows:
 - OrderLineItem<br>
 ![Image of orderlineitem model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/orderlineitem_model.JPG)
 
-#### ContactUs app:
+#### ContactUs app
 
 - ContactUs<br>
 ![Image of contactus model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/contactus_model.JPG)
 
+#### Home app
 
+- WelcomeMessage<br>
+![Image of welcomemessage model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/welcomemessage_model.JPG)
+
+#### Products app
+
+- Category<br>
+![Image of category model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/category_model.JPG)
+
+- Product<br>
+![Image of product model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/product_model.JPG)
+
+#### Profiles app
+
+- UserProfile<br>
+![Image of userprofile model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/userprofile_model.JPG)
+
+### Business Model
+
+The business model used for my application is B2C. The reason I chose this is because the products I will be selling are aimed at consumers and not businesses. The product selection and checkout flow allow for quick and straightforward purchases, which is not something you would use in a B2B environment. 
+
+### Marketing Strategy
+
+In terms of the marketing strategy choices employed for my application, I have made use of the following:<br>
+
+- Social media advertising, due to it being a no cost option and potentially able to reach many users
+- Email advertising due to the relative simplicity of creating newsletters or offers for potential and existing customers
+- SEO and looking to rank well in searches on Google to aid visibility of my application
+
+### Facebook Business Page
+
+The Facebook Business Page created for my project is as follows and makes use of the same imagery and logo. It is also linked to in the footer of my application.
+
+Home page:<br>
+![Wireframe of FB home page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page1.JPG)<br>
+
+Info:<br>
+![Wireframe of FB info details](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page2.JPG)<br>
+
+Photos:<br>
+![Wireframe of FB photo page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page3.JPG)<br>
+
+Community:<br>
+![Wireframe of FB community page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page4.JPG)<br>
 
 ### Wireframes
 
@@ -129,10 +178,9 @@ Contact us page:<br>
 404 page:<br>
 ![Wireframe of desktop 404 page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_404.JPG)<br>
 
-### User Stories:
+### User Stories
 
-
-#### New users:
+#### New users
 
 - As a site user I can browse through products so that I can decide what I may be interested in buying
 - As a site user I can look at product details so that I can decide whether I would like to buy it
@@ -154,7 +202,7 @@ Contact us page:<br>
 - As a site admin I can manage the welcome message text that displays on the Homepage so that I can update it if required
 - As a site admin I can manage the content on the “Tina's Blog” page so that it can be amended if needed
 
-#### Returning users:
+#### Returning users
 
 - As a returning site user I can have a look whether any new products have been added so that I can decide if I want to buy any
 - As a returning site user I can view my user profile (if I registered an account) so that I can see whether my details are still up-to-date and also view previous orders
@@ -163,7 +211,7 @@ Contact us page:<br>
 - As a returning site admin I can update the welcome message text so that any changes to it can be made
 - As a returning site admin I can update the "Tina's Blog" page content so that any required changes to it are reflected
 
-#### Frequent users:
+#### Frequent users
 
 - As per returning users
 
