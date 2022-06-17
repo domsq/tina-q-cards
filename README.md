@@ -178,6 +178,11 @@ Contact us page:<br>
 404 page:<br>
 ![Wireframe of desktop 404 page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_404.JPG)<br>
 
+<br>
+The final version of my site has a link for "Tina's Blog" instead of "About Us" in the main navigation element, this change was made following some discussion with my mentor. Also, in the footer, the newsletter signup is on the left instead of the right now. 
+<br>
+<br>
+
 ### User Stories
 
 #### New users
