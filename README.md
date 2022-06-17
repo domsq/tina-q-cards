@@ -224,11 +224,77 @@ The final version of my site has a link for "Tina's Blog" instead of "About Us" 
 
 ### Existing Features
 
+The application features a fixed header containing a nav element which is responsive and collapes for narrower viewports; you would see a "hamburger" icon to the left of the nav element, with the nav links below that, if viewed on a smaller screen. The links for account related activities are under the "Account" dropdown. You can search the products from the search box in the header and see whether you have anything in your basket:
+
+![Image of header](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/header.JPG)<br>
+
+The homepage features a welcome message and also a button to start browsing the products:
+
+![Image of homepage](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/homepage.JPG)<br>
+
+There is a footer containing a newsletter signup form and also links to social media pages and the privacy policy:
+
+![Image of footer](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/footer.JPG)<br>
+
+There is a login page:
+
+![Image of login page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/login.JPG)<br>
+
+There is also a logout page:
+
+![Image of logout page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/logout.JPG)<br>
+
+For unregistered users, there is a registration page:
+
+![Image of sign up page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/signup.JPG)<br>
+
+The products overview page shows all products and also has the function to sort them accordingly:
+
+![Image of products page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/products.JPG)<br>
+
+Clicking on a product will take you to the detail page for that item where a required quantity can be added to the basket:
+
+![Image of products page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/product_detail.JPG)<br>
+
+There is a notification system showing messages following user initiated actions such as adding an item to the basket, etc:
+
+![Image of notification](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/toast.JPG)<br>
+
+There is a view of the basket so that its contents can be adjusted if needed:
+
+![Image of basket page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/basket.JPG)<br>
+
+When going to checkout from the basket view, a checkout form and preview of the basket can be seen:
+
+![Image of checkout page 1](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/checkout1.JPG)<br>
+![Image of checkout page 2](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/checkout2.JPG)<br>
+
+Completing checkout successfully shows a confirmation screen for this:
+
+![Image of checkout complete page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/checkout_success.JPG)<br>
+
+For registered users, there is a profile view showing default delivery information and past orders:
+
+![Image of profile page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/profile.JPG)<br>
+
+Clicking on an order from the profile view shows its details:
+
+![Image of order history page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/past_order_details.JPG)<br>
+
+There is a blog page:
+
+![Image of blog page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog.JPG)<br>
+
+And finally a contact us page with a form to be filled out should a user wish to submit a message to the site admin:
+
+![Image of contact us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/contact_us.JPG)<br>
 
 
 ### Features Left to Implement
 
-
+- Implement a stock system so product quantities could be managed
+- Have a loyalty discount scheme where codes can be used to reduce the cost of some items
+- A method of reducing prices of items in bulk for sale type events
 
 ## Technologies Used
 
