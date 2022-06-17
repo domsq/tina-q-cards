@@ -254,7 +254,7 @@ The products overview page shows all products and also has the function to sort 
 
 Clicking on a product will take you to the detail page for that item where a required quantity can be added to the basket:
 
-![Image of products page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/product_detail.JPG)<br>
+![Image of product detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/product_detail.JPG)<br>
 
 There is a notification system showing messages following user initiated actions such as adding an item to the basket, etc:
 
@@ -329,14 +329,118 @@ And finally a contact us page with a form to be filled out should a user wish to
 - Heroku - Where the deployed application is served from
 - AWS S3 - Where media and static files are stored for the deployed application
 - Stripe - Used to provide payment functionality
+- Mailchimp - Used to provide the newsletter sign up functionality
 
 ### Services
 
 - [Mycolor.space](https://mycolor.space/) - Used for deciding on colour palette
 - [favicon.io](https://favicon.io/favicon-generator/) - Used to generate favicon  
+- [TinyPNG](https://tinypng.com/) - Used for optimisation of image file sizes
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard) - Where the privacy policy was generated from
+
+### Software
+
+- GIMP 2.10.30 - Used for the creation of the logo 
 
 ## Testing
 
+- As a site user I can browse through products so that I can decide what I may be interested in buying
+    - Expected: There will be a products page that I can look through
+    - Actual: Browsing to the products page of the site shows all products at a glance
+    ![Image of products page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/products.JPG)<br>
+- As a site user I can look at product details so that I can decide whether I would like to buy it
+    - Expected: Clicking on a product will show more details about it
+    - Actual: There is a detail page for each product, which opens when you click on the item
+    ![Image of product detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/product_detail.JPG)<br>
+- As a site user I can search for products so that I have another way of looking for items
+    - Expected: The site will have some sort of search function to allow searching of products
+    - Actual: From the header, there is a search box where product searches can be entered
+    ![Image of header](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/header.JPG)<br>
+- As a site user I can sort products on criteria such as category or price so that I have a method of ordering the products as I prefer
+    - Expected: When viewing the products page, there will be some way to sort products by different criteria
+    - Actual: On the products overview page, there is a "Sort" box at the top right that allows sorting
+    ![Image of products page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/products.JPG)<br>
+- As a site user I can add products I want to purchase to a basket so that I may then decide whether to purchase them or not
+    - Expected: The website will have some sort of basket function
+    - Actual: When viewing a product detail page, there are buttons to add a required quantity to the basket
+    ![Image of product detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/product_detail.JPG)<br>
+- As a site user I can view the contents of my shopping basket so that I can make any adjustments to it
+    - Expected: There will be a method to view the shopping basket
+    - Actual: Clicking on the basket icon in the header takes you to the basket page
+    ![Image of basket page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/basket.JPG)<br>
+- As a site user I can perform a checkout on my shopping basket so that I can create an order
+    - Expected: There should be a button to allow checkout of a basket
+    - Actual: From the basket page, you can click "Secure Checkout" to be taken to the checkout page
+    ![Image of checkout page 1](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/checkout1.JPG)<br>
+    ![Image of checkout page 2](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/checkout2.JPG)<br>
+- As a site user I can register an account so that I can make use of features reserved for registered users
+    - Expected: There will be a link to a sign up page
+    - Actual: As an anonymous user, clicking on "Account" in the header provides a link to a sign up page
+    ![Image of sign up page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/signup.JPG)<br>
+- As a site user I can log in so that I can use features reserved for registered users
+    - Expected: There should be a link to log into the site
+    - Actual: From the "Account" dropdown in the header, there is a log in link
+    ![Image of login page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/login.JPG)<br>
+- As a site user I can log out so that my account remains secure if I were to visit the site from a shared PC
+    - Expected: I should be able to log out of the site with a button of some sort
+    - Actual: As a logged in user, there is a link to log out under the "Account" dropdown
+    ![Image of logout page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/logout.JPG)<br>
+- As a site user I can view a profile for my user account so that I can see my order history and also make any adjustments to the details kept on record for me
+    - Expected: I should be able to, as a logged in user, navigate to a profile page
+    - Actual: From the "Account" dropdown, there is a link to a profile page visible to logged in users
+    ![Image of profile page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/profile.JPG)<br>
+- As a site user I can submit a message to admin so that any feedback or issues I’m having can be raised with them
+    - Expected: There should be a page to submit a message 
+    - Actual: From the "Contact Us" link, there is a form to allow sending of messages to site admin
+    ![Image of contact us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/contact_us.JPG)<br>
+- As a site admin I can manage product categories so that I may add, update or delete them as needed
+    - Expected: There will be an admin view where I can see the configured categories
+    - Actual: Navigating to the admin page, which has a link visible to admin users from the "Account" dropdown, allows managing of the categories
+    ![Image of category management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_categories.JPG)<br>
+- As a site admin I can manage products so that I may add, update or delete them as needed
+    - Expected: I will be able to view product management from the admin view
+    - Actual: From the admin page, I can select to manage the products
+    ![Image of product management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_products.JPG)<br>
+- As a site admin I can manage user accounts so that any required changes to them can be made
+    - Expected: The admin view should have a way to manage users
+    - Actual: From the admin page, clicking on "Users" allows management of them
+    ![Image of user management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_users.JPG)<br>
+- As a site admin I can view created orders so that they may be fulfilled, or amended if needs be
+    - Expected: There will be an admin view to see any submitted orders
+    - Actual: From the admin page, clicking on "Orders" allows you to view them
+    ![Image of order management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_orders.JPG)<br>
+- As a site admin I can view messages submitted via the contact us section so that I may act upon them
+    - Expected: I should be able to view submitted messages from an admin view
+    - Actual: Clicking on "Contact Us" from the admin page allows viewing of submitted messages
+    ![Image of message management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_messages.JPG)<br>
+- As a site admin I can manage the welcome message text that displays on the Homepage so that I can update it if required
+    - Expected: There will be a way to view the welcome message text
+    - Actual: From the admin page, clicking on "WelcomeMessage" allows for this functionality
+    ![Image of welcome message management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_welcomemessage.JPG)<br>
+- As a site admin I can manage the content on the “Tina's Blog” page so that it can be amended if needed
+    - Expected: The admin view will have a way to manage content for the blog page
+    - Actual: Navigating to "Blog posts" allows management of this content
+    ![Image of blog management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_blog.JPG)<br>
+
+The application has been tested using the Chrome, Edge and Firefox browsers at full width on a 1080p and 4K monitor, as well as a Samsung Galaxy S20 FE 5G handset. The following emulated device sizes were checked:<br>
+<br>
+
+- Chrome \ Edge
+    - Galaxy S5
+    - Pixel 2 XL
+    - iPhone 6/7/8
+    - iPhone X
+    - iPad
+    - iPad Pro
+- Firefox
+    - Galaxy S10/S10+
+    - Galaxy S20 Ultra
+    - iPad
+    - iPhone 11 Pro
+    - iPhone 12/13 +
+    - iPhone SE 2nd gen
+
+The application behaved as expected at the different viewport widths. While it functions as expected on a 4K monitor, it is optimised for screens 1080p and lower. 
 
 ### Bugs
 
