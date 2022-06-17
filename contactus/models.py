@@ -3,7 +3,7 @@ from django.db import models
 
 class ContactUs(models.Model):
     """ Schema for the ContactUs model """
-    
+
     class Meta:
         verbose_name_plural = 'Contact Us'
 
