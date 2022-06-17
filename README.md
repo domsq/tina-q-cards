@@ -464,7 +464,60 @@ During the development of my application, I encountered the following bugs which
 
 ### Validator testing
 
+- HTML
+    - Home page:<br>
+    ![Image of home page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/homepage_validate.JPG)<br>
+    - Products page:<br>
+    ![Image of product page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/products_validate.JPG)<br>
+    - Product detail page:<br>
+    ![Image of product detail page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/product_detail_validate.JPG)<br>
+    The error noted is due to my having to use the "linebreaks" filter on the item description to allow it to display correctly.
+    - Basket page:<br>
+    ![Image of basket page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/basket_validate.JPG)<br>
+    The error noted here is due to the fact that the basket page has a mobile view and one for larger screens, for this to work the required code 
+    (which is in an include file) appears twice in the DOM.
+    - Checkout page:<br>
+    ![Image of checkout page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/checkout_validate.JPG)<br>
+    The warning noted here is due to the structure of the overlay spinner, which appears while checkout is processing.
+    - Checkout complete page:<br>
+    ![Image of checkout complete page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/checkout_success_validate.JPG)<br>
+    - Profile page:<br>
+    ![Image of profile page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/profile_validate.JPG)<br>
+    - Blog page:<br>
+    ![Image of blog page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/blog_validate.JPG)<br>
+    The error noted relates to my using Summernote to edit the body text in the admin view.
+    - Contact Us page:<br>
+    ![Image of contact us page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/contact_us_validate.JPG)<br>
 
+- CSS
+    - Base.css file:<br>
+    ![Image of base.css validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/css/base_css_validate.JPG)<br>
+    - Checkout.css file:<br>
+    ![Image of checkout.css validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/css/checkout_css_validate.JPG)<br>
+    - Profile.css file:<br>
+    ![Image of profile.css validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/css/profile_css_validate.JPG)<br>
+
+- JS
+    - Quantity-input-script.js file:<br>
+    ![Image of quantity-input-script.js validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/js/quantity_script_validate.JPG)<br>
+    - Sort-selection.js file:<br>
+    ![Image of sort-selction.js validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/js/sort_selector_validate.JPG)<br>
+    - Stripe-elements.js file:<br>
+    ![Image of stripe-elements.js validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/js/stripe_elements_js_validate.JPG)<br>
+    - Update-remove.js file:<br>
+    ![Image of update-remove.js validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/js/update_remove_js_validate.JPG)<br>
+
+- Python
+  - Please see below flake8 validation for the python files in my project. For any errors noted, I was unable to correct these prior to submission and would need to revisit at a later date.<br>
+
+    ./checkout/apps.py:9:9: F401 'checkout.signals' imported but unused<br>
+    ./checkout/webhook_handler.py:74:80: E501 line too long (80 > 79 characters)<br>
+    ./checkout/webhook_handler.py:75:80: E501 line too long (80 > 79 characters)<br>
+    ./checkout/webhooks.py:24:5: F841 local variable 'e' is assigned to but never used<br>
+    ./checkout/webhooks.py:27:5: F841 local variable 'e' is assigned to but never used<br>
+    ./checkout/webhooks.py:39:80: E501 line too long (86 > 79 characters)<br>
+    ./contactus/forms.py:33:80: E501 line too long (98 > 79 characters)<br>
+    ./profiles/forms.py:36:80: E501 line too long (98 > 79 characters)<br>
 
 ## Deployment
 
@@ -487,18 +540,49 @@ During the development of my application, I encountered the following bugs which
     - Add secret key to env.py
     - Configure database path and secret key in settings.py to be read from environment variables
     - Perform commit and push to GitHub
-    - Also push commit to Heroku, this will trigger deployment, await completion 
+- Heroku
+    - Perform deployment on portal, await completion 
 
 ### Final deployment
 
+- Gitpod
+    - Ensure all required files up-to-date and that application is working
+    - Run "pip3 freeze --local > requirements.txt" to update requirements file
+    - Ensure "DEBUG = False" set in settings.py
+    - Perform commit and push to GitHub
+- Heroku
+    - Under "tina-q-cards" app, browse to Config Vars
+    - Remove the value "DISABLE_COLLECTSTATIC = 1" from Config Vars
+    - Add new Config Vars entries for the following with appropriate values:
+        - AWS_ACCESS_KEY_ID
+        - AWS_SECRET_ACCESS_KEY
+        - EMAIL_HOST_PASS
+        - EMAIL_HOST_USER
+        - STRIPE_PUBLIC_KEY
+        - STRIPE_SECRET_KEY
+        - STRIPE_WH_SECRET
+        - USE_AWS 
+    - Browse to Deploy and run deployment
+    - Wait for confirmation that app has deployed
 
 ## Credits 
 
 ### Content
 
+All content, apart from the background image for the homepage, was created by the developer (with help from my wife, who assisted me with the colour scheme, logo and product images as we thought it would be nice to be able to showcase some of her handmade cards). Also, the Facebook business page was created by her some time back but repurposed for this project with her permission.
 
 ### Media
 
+Background image from [unsplash.com](https://unsplash.com/photos/nipbRVoEp18?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
 
 ### Acknowledgements
 
+In addition to the content from the LMS, and in particular the Boutique Ado walkthrough project which provided me with guidance and inspiration for my project, I made use of the following resources:
+
+- https://docs.djangoproject.com/en/4.0/ref/settings/
+- https://stackoverflow.com/questions/3346230/wrap-long-lines-in-python
+- https://docs.djangoproject.com/en/4.0/ref/views/#the-404-page-not-found-view
+- https://github.com/summernote/django-summernote
+- https://stackoverflow.com/questions/10270891/newline-in-models-textfield-not-rendered-in-template
+
+As always, many thanks to my mentor Akshat Garg for his invaluable advice and guidance and also to the Code Institute Slack community who helped me whenever I had a query about my project or something related. Thanks guys!
