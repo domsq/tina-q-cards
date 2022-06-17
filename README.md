@@ -444,8 +444,26 @@ The application behaved as expected at the different viewport widths. While it f
 
 ### Bugs
 
+During the development of my application, I encountered the following bugs which I managed to resolve in each case:
+
+- While trying to adjust the nav links colour, I had forgotten to specifically target the "a" elements.
+- The header logo wouldn't initially display when using src="{{ MEDIA_URL }}tqc-logo.png", this was due to the context processor "'django.template.context_processors.media'," not being present. Adding this corrected the issue.
+- The logo on the mobile nav header wouldn't display initially, this was due to me adjusting the path on the main header but not the mobile one. Once set to src="{{ MEDIA_URL }}tqc-logo.png", this worked as expected. 
+- When configuring the basket page to show product images, this would crash if a product had no image associated. This was corrected using an if statement to check for a product image and if none, display a "noimage" image instead. 
+- When configuring the remove from basket functionality, I was getting a "CSRF token missing or invalid" error. This was due to my having put the associated JS into a separate file, turns out to be able to read the CSRF token, the script code needed to be directly in the template instead. 
+- I had an issue where when browsing to the homepage, the Django messaging system was picking up and displaying the homepage welcome title and displaying it. This was due to my referencing “messages” to display the contents of the WelcomeMessage model. The fix was to rather display the text directly in the index.html template and remove the context from the “home” view.
+- When configuring the checkout template, for the basket preview section, I mistakenly used the url “product_detail” which doesn’t exist and so got an error. Changing this to “product_details”, which does exist, fixed the issue.
+- When defining the “update_total” method in the Order model, where I referenced the key [‘lineitem_total_sum’], this caused a key error. This needed to be set to [‘lineitem_total__sum’].
+- While testing the Stripe webhook functionality in Gitpod, I initially was getting 401 errors and it didn’t seem to be reaching my test server. I needed to set port 8000 to public. 
+- When trying to update my Order table to use the django-country field, the migration for this failed as I had existing orders that weren’t using a valid 2 digit code. Removing these orders (which were only test ones) allowed the migrate operation to complete successfully.
+- My checkout wasn’t initially working once I’d deployed, this was because I’d forgotten to set the “STRIPE_PUBLIC_KEY”, “STRIPE_SECRET_KEY” and “STRIPE_WH_SECRET” environment variables on Heroku. 
+- When configuring the profiles app, I had to temporarily adjust the signal for profile creation to create a profile for my user. Upon testing, and before setting the signal back to what it should be, I was getting errors about the user profile already existing (this was due to the signal trying to create a new profile regardless). Once the signal was reset to what it should be, the error was resolved.
+- If you scroll all the way down on the products page, getting right to the bottom of the footer, the BTT button wouldn't work. Adding z-index of 1 fixed this.
+- When configuring Summernote for the body field on the BlogPost model admin view, I forgot to add the URLs to the base URL file, resulting in a “Not found” error. Correctly adding the URLs to the base URL file fixed this. 
+
 
 ### Validator testing
+
 
 
 ## Deployment
