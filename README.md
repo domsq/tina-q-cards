@@ -370,7 +370,7 @@ And finally a contact us page with a form to be filled out should a user wish to
     ![Image of basket page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/basket.JPG)<br>
 - As a site user I can perform a checkout on my shopping basket so that I can create an order
     - Expected: There should be a button to allow checkout of a basket
-    - Actual: From the basket page, you can click "Secure Checkout" to be taken to the checkout page
+    - Actual: From the basket page, you can click "Secure Checkout" to be taken to the checkout page (see above image for "Secure Checkout" button location)
     ![Image of checkout page 1](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/checkout1.JPG)<br>
     ![Image of checkout page 2](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/checkout2.JPG)<br>
 - As a site user I can register an account so that I can make use of features reserved for registered users
@@ -569,7 +569,7 @@ During the development of my application, I encountered the following bugs which
 
 ### Content
 
-All content, apart from the background image for the homepage, was created by the developer (with help from my wife, who assisted me with the colour scheme, logo and product images as we thought it would be nice to be able to showcase some of her handmade cards). Also, the Facebook business page was created by her some time back but repurposed for this project with her permission.
+All content, apart from the background image for the homepage, was created by the developer (with help from my wife, who assisted me with the colour scheme, logo and product images as we thought it would be nice to be able to showcase some of her handmade cards). Also, the Facebook business page was created by her some time back (although inactive) but repurposed for this project with her permission. The Instagram page linked to in the footer was already active and in use. 
 
 ### Media
 
