@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from .models import BlogPost
+from .models import BlogPost, Reply
 
 
-def view_blog(request):
+def blog_overview(request):
     """ View to render blog posts """
 
     posts = BlogPost.objects.all()
 
-    template = 'blog/blog.html'
+    template = 'blog/blog_overview.html'
     context = {
         'posts': posts,
     }
