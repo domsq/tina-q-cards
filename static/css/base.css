@@ -351,6 +351,17 @@ a.category-badge > span.badge:hover {
     color: #212529;  
 }
 
+.signin-link {
+    color: #AB274F !important;
+    text-decoration: none !important;
+}
+
+.signin-link:hover,
+.sigin-link:active,
+.signin-link:focus {
+    color: #CA9FB5 !important;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
