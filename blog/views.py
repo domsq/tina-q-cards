@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
-from .models import BlogPost
+from django.contrib.auth.decorators import login_required
+from .models import BlogPost, Reply
 from .forms import ReplyForm
 
 
@@ -40,6 +41,41 @@ def blog_detail(request, blog_id):
                 messages.error(request, 'Reply not added!')
 
     form = ReplyForm()
+    template = 'blog/blog_detail.html'
+    context = {
+        'post': post,
+        'replies': replies,
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def blog_reply_edit(request, reply_id):
+    """ View to edit blog reply """
+
+    queryset = Reply.objects
+    reply = get_object_or_404(queryset, pk=reply_id)
+    post = reply.post
+    replies = post.blog_replies.all()
+
+    if request.user != reply.creator:
+        messages.error(request, 'Action not allowed')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        reply_form = ReplyForm(request.POST, instance=reply)
+        if reply_form.is_valid():
+            reply_form.save()
+            messages.success(request, 'Reply successfully amended!')
+            return redirect(reverse('blog_detail', args=[post.id]))
+        else:
+            messages.error(request, 'Reply not amended!')
+
+    messages.info(request, 'Editing reply')
+
+    form = ReplyForm(instance=reply)
     template = 'blog/blog_detail.html'
     context = {
         'post': post,
