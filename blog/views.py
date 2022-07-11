@@ -84,3 +84,41 @@ def blog_reply_edit(request, reply_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def blog_reply_confirm_delete(request, reply_id):
+    """ View to confirm blog reply delete """
+
+    queryset = Reply.objects
+    reply = get_object_or_404(queryset, pk=reply_id)
+    post = reply.post
+
+    if request.user != reply.creator:
+        messages.error(request, 'Action not allowed')
+        return redirect(reverse('home'))
+
+    template = 'blog/blog_reply_confirm_delete.html'
+    context = {
+        'post': post,
+        'reply': reply,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def blog_reply_delete(request, reply_id):
+    """ Delete a blog reply """
+
+    queryset = Reply.objects
+    reply = get_object_or_404(queryset, pk=reply_id)
+    post = reply.post
+
+    if request.user != reply.creator:
+        messages.error(request, 'Action not allowed')
+        return redirect(reverse('home'))
+    else:
+        reply.delete()
+        messages.success(request, 'Reply deleted!')
+        return redirect(reverse('blog_detail', args=[post.id]))

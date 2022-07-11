@@ -48,7 +48,7 @@
                     {% if user == reply.creator %}
                         <small>
                             <a href="{% url 'blog_reply_edit' reply.id %}">Edit</a> |
-                            <a href="" class="text-danger">Delete</a>
+                            <a href="{% url 'blog_reply_confirm_delete' reply.id %}" class="text-danger">Delete</a>
                         </small>
                     {% endif %}  
                 </div>                
