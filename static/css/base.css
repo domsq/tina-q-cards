@@ -344,6 +344,13 @@ a.category-badge > span.badge:hover {
     border-bottom-color: #343a40 !important;
 }
 
+/* Blog Page */
+
+.blog-link {
+    text-decoration: none !important;
+    color: #212529;  
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
