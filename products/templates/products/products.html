@@ -82,7 +82,7 @@
                                     {% if user.is_superuser %}
                                         <small>
                                             <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                            <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                                            <a href="{% url 'confirm_delete_product' product.id %}" class="text-danger">Delete</a>
                                         </small>
                                     {% endif %}                                  
                                 </div>

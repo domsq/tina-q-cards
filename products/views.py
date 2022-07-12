@@ -136,6 +136,24 @@ def edit_product(request, product_id):
 
 
 @login_required
+def confirm_delete_product(request, product_id):
+    """ View to confirm product delete """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admins can do that.')
+        return redirect(reverse('home'))
+
+    queryset = Product.objects
+    product = get_object_or_404(queryset, pk=product_id)
+
+    template = 'products/confirm_product_delete.html'
+    context = {
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def delete_product(request, product_id):
     """ Delete a product """
     if not request.user.is_superuser:
