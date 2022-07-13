@@ -549,6 +549,9 @@ During the development of my application, I encountered the following bugs which
     - Blog detail page:<br>
     ![Image of blog detail page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/blog_detail_validate.JPG)<br>
     The error noted relates to my using Summernote to edit the body text in the admin view.
+    - Blog reply edit page:<br>
+    ![Image of blog reply edit page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/edit_reply_validate.JPG)<br>
+    The error noted relates to my using Summernote to edit the body text in the admin view. As this page also shows the blog post detail, this is why the same error appears. 
     - Blog reply delete page:<br>
     ![Image of blog reply delete page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/delete_reply_validate.JPG)<br>
     - Contact Us page:<br>
