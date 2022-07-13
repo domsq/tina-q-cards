@@ -76,7 +76,7 @@ def blog_reply_edit(request, reply_id):
     messages.info(request, 'Editing reply')
 
     form = ReplyForm(instance=reply)
-    template = 'blog/blog_detail.html'
+    template = 'blog/blog_reply_edit.html'
     context = {
         'post': post,
         'replies': replies,
