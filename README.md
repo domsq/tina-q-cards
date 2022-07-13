@@ -440,14 +440,31 @@ Deleting a product triggers the following confirmation page:
     - Expected: There should be a page to submit a message 
     - Actual: From the "Contact Us" link, there is a form to allow sending of messages to site admin
     ![Image of contact us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/contact_us.JPG)<br>
+- As a site user I can reply to the blog posts so that I can express an opinion about them or add a comment
+    - Expected: There will be a form to submit a reply when viewing a blog post
+    - Actual: On the blog post detail page, there is an inline form below the post that logged in users can use to post a reply
+    ![Image of blog reply form](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog_detail2.JPG)<br>
+- As a site user I can edit my replies to the blog posts so that I may update them if needed
+    - Expected: There will be a function to edit an existing reply
+    - Actual: On the blog post detail page, if the user clicks "Edit" on one of their replies, the inline form below the post is used for editing the reply
+    ![Image of blog reply edit](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog_reply_edit.JPG)<br>
+- As a site user I can delete any of my replies to the blog posts so that I can remove them if I feel they’re no longer needed
+    - Expected: There will be a function to delete a reply
+    - Actual: On the blog post detail page, if the user clicks "Delete" on one of their replies, they are shown a confirmation screen regarding the reply deletion
+    ![Image of blog reply delete confirmation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/delete_reply.JPG)<br>
 - As a site admin I can manage product categories so that I may add, update or delete them as needed
     - Expected: There will be an admin view where I can see the configured categories
     - Actual: Navigating to the admin page, which has a link visible to admin users from the "Account" dropdown, allows managing of the categories
     ![Image of category management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_categories.JPG)<br>
 - As a site admin I can manage products so that I may add, update or delete them as needed
-    - Expected: I will be able to view product management from the admin view
-    - Actual: From the admin page, I can select to manage the products
-    ![Image of product management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_products.JPG)<br>
+    - Expected: There will be functionality to manage products
+    - Actual: 
+        - Adding products: From the "Account" dropdown, I can click "Product Management" as a logged in admin user to add a new product
+        ![Image of add product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/add_product.JPG)<br>
+        - Updating products: From either the product overview or product detail pages, I can click "Edit" on a product as a logged in admin user to update it
+        ![Image of edit product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/edit_product.JPG)<br>
+        - Deleting products: From either the product overview or product detail pages, I can click "Delete" on a product as a logged in admin user to delete it
+        ![Image of delete product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/delete_product.JPG)<br>
 - As a site admin I can manage user accounts so that any required changes to them can be made
     - Expected: The admin view should have a way to manage users
     - Actual: From the admin page, clicking on "Users" allows management of them
@@ -460,10 +477,6 @@ Deleting a product triggers the following confirmation page:
     - Expected: I should be able to view submitted messages from an admin view
     - Actual: Clicking on "Contact Us" from the admin page allows viewing of submitted messages
     ![Image of message management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_messages.JPG)<br>
-- As a site admin I can manage the welcome message text that displays on the Homepage so that I can update it if required
-    - Expected: There will be a way to view the welcome message text
-    - Actual: From the admin page, clicking on "WelcomeMessage" allows for this functionality
-    ![Image of welcome message management page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/testing/manage_welcomemessage.JPG)<br>
 - As a site admin I can manage the content on the “Tina's Blog” page so that it can be amended if needed
     - Expected: The admin view will have a way to manage content for the blog page
     - Actual: Navigating to "Blog posts" allows management of this content
@@ -506,8 +519,9 @@ During the development of my application, I encountered the following bugs which
 - My checkout wasn’t initially working once I’d deployed, this was because I’d forgotten to set the “STRIPE_PUBLIC_KEY”, “STRIPE_SECRET_KEY” and “STRIPE_WH_SECRET” environment variables on Heroku. 
 - When configuring the profiles app, I had to temporarily adjust the signal for profile creation to create a profile for my user. Upon testing, and before setting the signal back to what it should be, I was getting errors about the user profile already existing (this was due to the signal trying to create a new profile regardless). Once the signal was reset to what it should be, the error was resolved.
 - If you scroll all the way down on the products page, getting right to the bottom of the footer, the BTT button wouldn't work. Adding z-index of 1 fixed this.
-- When configuring Summernote for the body field on the BlogPost model admin view, I forgot to add the URLs to the base URL file, resulting in a “Not found” error. Correctly adding the URLs to the base URL file fixed this. 
-
+- When configuring Summernote for the body field on the BlogPost model admin view, I forgot to add the URLs to the base URL file, resulting in a “Not found” error. Correctly adding the URLs to the base URL file fixed this.
+- When configuring the blog overview template, the posts weren’t displaying as I intended, namely side by side on larger screens. This was due to me having put the containing div for the posts outside the for loop for generating the posts, rather than inside it. 
+- When creating the blog detail page, which shows all related replies, I was initially getting an error regarding "‘RelatedManager’ object is not iterable" when trying to render the replies. This was due to my having referenced the associated replies in the view as "replies = post.blog_replies" instead of "replies = post.blog_replies.all()"
 
 ### Validator testing
 
@@ -530,11 +544,21 @@ During the development of my application, I encountered the following bugs which
     ![Image of checkout complete page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/checkout_success_validate.JPG)<br>
     - Profile page:<br>
     ![Image of profile page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/profile_validate.JPG)<br>
-    - Blog page:<br>
-    ![Image of blog page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/blog_validate.JPG)<br>
+    - Blog overview page:<br>
+    ![Image of blog overview page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/blog_overview_validate.JPG)<br>
+    - Blog detail page:<br>
+    ![Image of blog detail page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/blog_detail_validate.JPG)<br>
     The error noted relates to my using Summernote to edit the body text in the admin view.
+    - Blog reply delete page:<br>
+    ![Image of blog reply delete page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/delete_reply_validate.JPG)<br>
     - Contact Us page:<br>
     ![Image of contact us page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/contact_us_validate.JPG)<br>
+    - Add Product page:<br>
+    ![Image of add product page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/add_product_validate.JPG)<br>
+    - Edit Product page:<br>
+    ![Image of edit product page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/edit_product_validate.JPG)<br>
+    - Delete Product page:<br>
+    ![Image of delete product page validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/html/delete_product_validate.JPG)<br>
 
 - CSS
     - Base.css file:<br>
@@ -555,16 +579,12 @@ During the development of my application, I encountered the following bugs which
     ![Image of update-remove.js validation](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/validation/js/update_remove_js_validate.JPG)<br>
 
 - Python
-  - Please see below flake8 validation for the python files in my project. For any errors noted, I was unable to correct these prior to submission and would need to revisit at a later date.<br>
+  - Please see below flake8 validation for the python files in my project. There are 3 warnings and 1 error, I was unable to correct the error without affecting functionality.<br>
 
     ./checkout/apps.py:9:9: F401 'checkout.signals' imported but unused<br>
-    ./checkout/webhook_handler.py:74:80: E501 line too long (80 > 79 characters)<br>
-    ./checkout/webhook_handler.py:75:80: E501 line too long (80 > 79 characters)<br>
     ./checkout/webhooks.py:24:5: F841 local variable 'e' is assigned to but never used<br>
     ./checkout/webhooks.py:27:5: F841 local variable 'e' is assigned to but never used<br>
     ./checkout/webhooks.py:39:80: E501 line too long (86 > 79 characters)<br>
-    ./contactus/forms.py:33:80: E501 line too long (98 > 79 characters)<br>
-    ./profiles/forms.py:36:80: E501 line too long (98 > 79 characters)<br>
 
 ## Deployment
 
@@ -633,4 +653,6 @@ In addition to the content from the LMS, and in particular the Boutique Ado walk
 - https://github.com/summernote/django-summernote
 - https://stackoverflow.com/questions/10270891/newline-in-models-textfield-not-rendered-in-template
 
-As always, many thanks to my mentor Akshat Garg for his invaluable advice and guidance and also to the Code Institute Slack community who helped me whenever I had a query about my project or something related. Thanks guys!
+As always, many thanks to my mentor Akshat Garg for his invaluable advice and guidance. Earlier on in the design of my application, I had a model called "WelcomeMessage" for the homepage introduction text and also what is now "Tina's Blog" was originally going to be called "About Us". I removed "WelcomeMessage" and adjusted "About Us" to "Tina's Blog" following some discussion with Akshat.<br>
+<br>
+I'd also like to acknowledge the Code Institute Slack community, who helped me whenever I had a query about my project or something related. Thanks guys!
