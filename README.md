@@ -1,6 +1,6 @@
 # Tina Q Cards
 
-Tina Q Cards is a website selling bespoke handmade greeting cards for occasions such as birthdays, anniversaries, get well soon and so on. Users are able to browse the selection of cards and purchase any they like the look of. They can also send a message requesting cards to be made to requirements. Users will be able to look at previous orders and update their delivery details if they register an account. 
+Tina Q Cards is a website selling bespoke handmade greeting cards for occasions such as birthdays, anniversaries, get well soon and so on. Users are able to browse the selection of cards and purchase any they like the look of. They can also send a message requesting cards to be made to requirements. Users will be able to look at previous orders and update their delivery details if they register an account. Admin users can add, edit and delete products. Non-admin users are also able to add, edit and delete replies to the blog posts (they can only edit and delete replies that belong to them).
 
 ![Image of application pages on different screen sizes](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/am_i_responsive.JPG)<br>
 
@@ -32,8 +32,9 @@ The schema overview for my application is as below:
 
 As seen above, the Category table has a one-to-many link with Product as one category can contain many products.
 The Order table has a one-to-many link with OrderLineItem, as one order can contain many line items. There is also a one-to-many link between Product and OrderLineItem as the same product can appear in many line items on different orders.<br><br>
-There is a one-to-many relationship between UserProfile and Order as one user can have many orders associated with them. The UserProfile table also has a one-to-one link with the built-in Django User model (shown here for demonstration purposes) as each user can have only one profile linked to them.
-The ContactUs, WelcomeMessage and BlogPost tables are standalone with no links to any other tables. 
+There is a one-to-many relationship between UserProfile and Order as one user can have many orders associated with them. The UserProfile table also has a one-to-one link with the built-in Django User model (shown here for demonstration purposes) as each user can have only one profile linked to them. The BlogPost table has a one-to-many relationship with Reply, which allows for multiple replies to a particular blog post. There is also a one-to-many relationship between the User model and the Reply table as one user may have many replies.<br><br>
+
+The ContactUs table is standalone with no links to any other tables.<br><br>
 
 The details for each model are as follows:
 
@@ -41,6 +42,9 @@ The details for each model are as follows:
 
 - BlogPost<br>
 ![Image of blogpost model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/blogpost_model.JPG)
+
+- Reply<br>
+![Image of reply model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/reply_model.JPG)
 
 #### Checkout app
 
@@ -54,11 +58,6 @@ The details for each model are as follows:
 
 - ContactUs<br>
 ![Image of contactus model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/contactus_model.JPG)
-
-#### Home app
-
-- WelcomeMessage<br>
-![Image of welcomemessage model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/welcomemessage_model.JPG)
 
 #### Products app
 
@@ -123,10 +122,16 @@ Checkout confirmation page:<br>
 ![Wireframe of mobile checkout confirmation page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_checkout_confirm.JPG)<br>
 User profile page:<br>
 ![Wireframe of mobile user profile page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_profile.JPG)<br>
-About us page:<br>
-![Wireframe of mobile about us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_about.JPG)<br>
+Blog overview page:<br>
+![Wireframe of mobile blog overview page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_blog_overview.JPG)<br>
+Blog detail page:<br>
+![Wireframe of mobile blog detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_blog_detail.JPG)<br>
 Contact us page:<br>
 ![Wireframe of mobile contact us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_contact.JPG)<br>
+Add product page:<br>
+![Wireframe of mobile add product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_add_product.JPG)<br>
+Edit product page:<br>
+![Wireframe of mobile edit product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_edit_product.JPG)<br>
 404 page:<br>
 ![Wireframe of mobile 404 page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_mobile_404.JPG)<br>
 
@@ -148,10 +153,16 @@ Checkout confirmation page:<br>
 ![Wireframe of tablet checkout confirmation page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_checkout_confirm.JPG)<br>
 User profile page:<br>
 ![Wireframe of tablet user profile page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_profile.JPG)<br>
-About us page:<br>
-![Wireframe of tablet about us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_about.JPG)<br>
+Blog overview page:<br>
+![Wireframe of tablet blog overview page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_blog_overview.JPG)<br>
+Blog detail page:<br>
+![Wireframe of tablet blog detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_blog_detail.JPG)<br>
 Contact us page:<br>
 ![Wireframe of tablet contact us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_contact.JPG)<br>
+Add product page:<br>
+![Wireframe of tablet add product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_add_product.JPG)<br>
+Edit product page:<br>
+![Wireframe of tablet edit product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_edit_product.JPG)<br>
 404 page:<br>
 ![Wireframe of tablet 404 page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_tablet_404.JPG)<br>
 
@@ -171,10 +182,16 @@ Checkout confirmation page:<br>
 ![Wireframe of desktop checkout confirmation page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_checkout_confirm.JPG)<br>
 User profile page:<br>
 ![Wireframe of desktop user profile page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_profile.JPG)<br>
-About us page:<br>
-![Wireframe of desktop about us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_about.JPG)<br>
+Blog overview page:<br>
+![Wireframe of desktop blog overview page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_blog_overview.JPG)<br>
+Blog detail page:<br>
+![Wireframe of desktop blog detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_blog_detail.JPG)<br>
 Contact us page:<br>
 ![Wireframe of desktop contact us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_contact.JPG)<br>
+Add product page:<br>
+![Wireframe of desktop add product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_add_product.JPG)<br>
+Edit product page:<br>
+![Wireframe of desktop edit product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_edit_product.JPG)<br>
 404 page:<br>
 ![Wireframe of desktop 404 page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_404.JPG)<br>
 
