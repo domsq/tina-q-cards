@@ -196,7 +196,7 @@ Edit product page:<br>
 ![Wireframe of desktop 404 page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/wireframe_desktop_404.JPG)<br>
 
 <br>
-The final version of my site has a link for "Tina's Blog" instead of "About Us" in the main navigation element, this change was made following some discussion with my mentor. Also, in the footer, the newsletter signup is on the left instead of the right now. 
+For the final version of my site, the newsletter signup is on the left instead of the right now in the footer.
 <br>
 <br>
 
@@ -216,21 +216,23 @@ The final version of my site has a link for "Tina's Blog" instead of "About Us" 
 - As a site user I can log out so that my account remains secure if I were to visit the site from a shared PC
 - As a site user I can view a profile for my user account so that I can see my order history and also make any adjustments to the details kept on record for me
 - As a site user I can submit a message to admin so that any feedback or issues I’m having can be raised with them
+- As a site user I can reply to the blog posts so that I can express an opinion about them or add a comment 
+- As a site user I can edit my replies to the blog posts so that I may update them if needed
+- As a site user I can delete any of my replies to the blog posts so that I can remove them if I feel they’re no longer needed
 - As a site admin I can manage product categories so that I may add, update or delete them as needed
 - As a site admin I can manage products so that I may add, update or delete them as needed
 - As a site admin I can manage user accounts so that any required changes to them can be made
 - As a site admin I can view created orders so that they may be fulfilled, or amended if needs be
 - As a site admin I can view messages submitted via the contact us section so that I may act upon them
-- As a site admin I can manage the welcome message text that displays on the Homepage so that I can update it if required
 - As a site admin I can manage the content on the “Tina's Blog” page so that it can be amended if needed
 
 #### Returning users
 
 - As a returning site user I can have a look whether any new products have been added so that I can decide if I want to buy any
 - As a returning site user I can view my user profile (if I registered an account) so that I can see whether my details are still up-to-date and also view previous orders
+- As a returning site user I can see whether any new blog posts and associated replies have been added
 - As a returning site admin I can see whether any new messages have been submitted so that I can action them accordingly
 - As a returning site admin I can look at whether any new orders have been placed so that I can fulfill or amend them as required
-- As a returning site admin I can update the welcome message text so that any changes to it can be made
 - As a returning site admin I can update the "Tina's Blog" page content so that any required changes to it are reflected
 
 #### Frequent users
@@ -298,13 +300,41 @@ Clicking on an order from the profile view shows its details:
 
 ![Image of order history page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/past_order_details.JPG)<br>
 
-There is a blog page:
+There is a blog overview page showing all blog posts at a glance:
 
-![Image of blog page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog.JPG)<br>
+![Image of blog overview page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog.JPG)<br>
 
-And finally a contact us page with a form to be filled out should a user wish to submit a message to the site admin:
+Clicking on a particular blog post takes you to its detail page:
+
+![Image of blog detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog_detail1.JPG)<br>
+
+Logged in users can also post a reply to a blog post using the inline form for this:
+
+![Image of blog detail page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog_detail2.JPG)<br>
+
+Editing a blog reply is done via the same form:
+
+![Image of blog reply edit page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/blog_reply_edit.JPG)<br>
+
+Deleting a blog reply triggers the following confirmation page:
+
+![Image of delete blog reply confirmation page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/delete_reply.JPG)<br>
+
+There is a contact us page with a form to be filled out should a user wish to submit a message to the site admin:
 
 ![Image of contact us page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/contact_us.JPG)<br>
+
+For admin users, there is a page to add new products:
+
+![Image of add product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/add_product.JPG)<br>
+
+Admin users can also edit products:
+
+![Image of edit product page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/edit_product.JPG)<br>
+
+Deleting a product triggers the following confirmation page:
+
+![Image of delete product confirmation page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/features/delete_product.JPG)<br>
 
 
 ### Features Left to Implement
