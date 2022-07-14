@@ -75,12 +75,12 @@ def checkout(request):
 
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't \
+                        "One of the products in your basket wasn't \
                         found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
-                    return redirect(reverse('view_bag'))
+                    return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',
