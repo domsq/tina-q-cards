@@ -8,21 +8,62 @@ Tina Q Cards is a website selling bespoke handmade greeting cards for occasions 
 
 ## UX
 
-### Imagery
+### User Stories
 
- My application features a simple background image showing some texture on the homepage. The other images present are those for the products. I also make use of Font Awesome icons for some additional visual flourish.
+#### New users
 
-### Typography
+- As a site user I can browse through products so that I can decide what I may be interested in buying
+- As a site user I can look at product details so that I can decide whether I would like to buy it
+- As a site user I can search for products so that I have another way of looking for items
+- As a site user I can sort products on criteria such as category or price so that I have a method of ordering the products as I prefer
+- As a site user I can add products I want to purchase to a basket so that I may then decide whether to purchase them or not
+- As a site user I can view the contents of my shopping basket so that I can make any adjustments to it
+- As a site user I can perform a checkout on my shopping basket so that I can create an order
+- As a site user I can register an account so that I can make use of features reserved for registered users
+- As a site user I can log in so that I can use features reserved for registered users
+- As a site user I can log out so that my account remains secure if I were to visit the site from a shared PC
+- As a site user I can view a profile for my user account so that I can see my order history and also make any adjustments to the details kept on record for me
+- As a site user I can submit a message to admin so that any feedback or issues I’m having can be raised with them
+- As a site user I can reply to the blog posts so that I can express an opinion about them or add a comment 
+- As a site user I can edit my replies to the blog posts so that I may update them if needed
+- As a site user I can delete any of my replies to the blog posts so that I can remove them if I feel they’re no longer needed
+- As a site admin I can manage product categories so that I may add, update or delete them as needed
+- As a site admin I can manage products so that I may add, update or delete them as needed
+- As a site admin I can manage user accounts so that any required changes to them can be made
+- As a site admin I can view created orders so that they may be fulfilled, or amended if needs be
+- As a site admin I can view messages submitted via the contact us section so that I may act upon them
+- As a site admin I can manage the content on the “Tina's Blog” page so that it can be amended if needed
 
-The fonts used in my application are "Corben" for any heading type text and "Montserrat" for any remaining content. These come from Google Fonts. 
+#### Returning users
 
-### Colour scheme
+- As a returning site user I can have a look whether any new products have been added so that I can decide if I want to buy any
+- As a returning site user I can view my user profile (if I registered an account) so that I can see whether my details are still up-to-date and also view previous orders
+- As a returning site user I can see whether any new blog posts and associated replies have been added
+- As a returning site admin I can see whether any new messages have been submitted so that I can action them accordingly
+- As a returning site admin I can look at whether any new orders have been placed so that I can fulfill or amend them as required
+- As a returning site admin I can update the "Tina's Blog" page content so that any required changes to it are reflected
 
-The colour scheme is based around darker pink and red colours (#AB274F, #CA9FB5, #A16484) with a very dark purple colour used for certain backgrounds and also for some button elements (#54424B). The palette for this was determined using [mycolor.space](https://mycolor.space/?hex=%23AB274F&sub=1) and is known as the "Neighbor Palette":
+#### Frequent users
 
-![Image of colour palette](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/colour_palette.JPG)<br>
+- As per returning users
 
-The colour #AB274F has also been used for certain button elements and for various headings. It is the primary colour for the site with the other colours used to support it. 
+### Design
+
+#### Imagery
+
+- My application features a simple background image showing some texture on the homepage. The other images present are those for the products. I also make use of Font Awesome icons for some additional visual flourish.
+
+#### Typography
+
+- The fonts used in my application are "Corben" for any heading type text and "Montserrat" for any remaining content. These come from Google Fonts. 
+
+#### Colour scheme
+
+- The colour scheme is based around darker pink and red colours (#AB274F, #CA9FB5, #A16484) with a very dark purple colour used for certain backgrounds and also for some button elements (#54424B). The palette for this was determined using [mycolor.space](https://mycolor.space/?hex=%23AB274F&sub=1) and is known as the "Neighbor Palette":
+
+- ![Image of colour palette](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/colour_palette.JPG)<br>
+
+- The colour #AB274F has also been used for certain button elements and for various headings. It is the primary colour for the site with the other colours used to support it. 
 
 ### Schema
 
@@ -71,34 +112,6 @@ The details for each model are as follows:
 
 - UserProfile<br>
 ![Image of userprofile model](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/userprofile_model.JPG)
-
-### Business Model
-
-The business model used for my application is B2C. The reason I chose this is because the products I will be selling are aimed at consumers and not businesses. The product selection and checkout flow allow for quick and straightforward purchases, which is not something you would use in a B2B environment. 
-
-### Marketing Strategy
-
-In terms of the marketing strategy choices employed for my application, I have made use of the following:<br>
-
-- Social media advertising, due to it being a no cost option and potentially able to reach many users
-- Email advertising due to the relative simplicity of creating newsletters or offers for potential and existing customers
-- SEO and looking to rank well in searches on Google to aid visibility of my application
-
-### Facebook Business Page
-
-The Facebook Business Page created for my project is as follows and makes use of the same imagery and logo. It is also linked to in the footer of my application.
-
-Home page:<br>
-![Wireframe of FB home page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page1.JPG)<br>
-
-Info:<br>
-![Wireframe of FB info details](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page2.JPG)<br>
-
-Photos:<br>
-![Wireframe of FB photo page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page3.JPG)<br>
-
-Community:<br>
-![Wireframe of FB community page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page4.JPG)<br>
 
 ### Wireframes
 
@@ -200,44 +213,33 @@ For the final version of my site, the newsletter signup is on the left instead o
 <br>
 <br>
 
-### User Stories
+### Business Model
 
-#### New users
+The business model used for my application is B2C. The reason I chose this is because the products I will be selling are aimed at consumers and not businesses. The product selection and checkout flow allow for quick and straightforward purchases, which is not something you would use in a B2B environment. 
 
-- As a site user I can browse through products so that I can decide what I may be interested in buying
-- As a site user I can look at product details so that I can decide whether I would like to buy it
-- As a site user I can search for products so that I have another way of looking for items
-- As a site user I can sort products on criteria such as category or price so that I have a method of ordering the products as I prefer
-- As a site user I can add products I want to purchase to a basket so that I may then decide whether to purchase them or not
-- As a site user I can view the contents of my shopping basket so that I can make any adjustments to it
-- As a site user I can perform a checkout on my shopping basket so that I can create an order
-- As a site user I can register an account so that I can make use of features reserved for registered users
-- As a site user I can log in so that I can use features reserved for registered users
-- As a site user I can log out so that my account remains secure if I were to visit the site from a shared PC
-- As a site user I can view a profile for my user account so that I can see my order history and also make any adjustments to the details kept on record for me
-- As a site user I can submit a message to admin so that any feedback or issues I’m having can be raised with them
-- As a site user I can reply to the blog posts so that I can express an opinion about them or add a comment 
-- As a site user I can edit my replies to the blog posts so that I may update them if needed
-- As a site user I can delete any of my replies to the blog posts so that I can remove them if I feel they’re no longer needed
-- As a site admin I can manage product categories so that I may add, update or delete them as needed
-- As a site admin I can manage products so that I may add, update or delete them as needed
-- As a site admin I can manage user accounts so that any required changes to them can be made
-- As a site admin I can view created orders so that they may be fulfilled, or amended if needs be
-- As a site admin I can view messages submitted via the contact us section so that I may act upon them
-- As a site admin I can manage the content on the “Tina's Blog” page so that it can be amended if needed
+### Marketing Strategy
 
-#### Returning users
+In terms of the marketing strategy choices employed for my application, I have made use of the following:<br>
 
-- As a returning site user I can have a look whether any new products have been added so that I can decide if I want to buy any
-- As a returning site user I can view my user profile (if I registered an account) so that I can see whether my details are still up-to-date and also view previous orders
-- As a returning site user I can see whether any new blog posts and associated replies have been added
-- As a returning site admin I can see whether any new messages have been submitted so that I can action them accordingly
-- As a returning site admin I can look at whether any new orders have been placed so that I can fulfill or amend them as required
-- As a returning site admin I can update the "Tina's Blog" page content so that any required changes to it are reflected
+- Social media advertising, due to it being a no cost option and potentially able to reach many users
+- Email advertising due to the relative simplicity of creating newsletters or offers for potential and existing customers
+- SEO and looking to rank well in searches on Google to aid visibility of my application
 
-#### Frequent users
+### Facebook Business Page
 
-- As per returning users
+The Facebook Business Page created for my project is as follows and makes use of the same imagery and logo. It is also linked to in the footer of my application.
+
+Home page:<br>
+![Wireframe of FB home page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page1.JPG)<br>
+
+Info:<br>
+![Wireframe of FB info details](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page2.JPG)<br>
+
+Photos:<br>
+![Wireframe of FB photo page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page3.JPG)<br>
+
+Community:<br>
+![Wireframe of FB community page](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/fb_page4.JPG)<br>
 
 ## Features
 
