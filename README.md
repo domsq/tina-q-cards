@@ -4,7 +4,7 @@ Tina Q Cards is a website selling bespoke handmade greeting cards for occasions 
 
 ![Image of application pages on different screen sizes](https://raw.githubusercontent.com/domsq/tina-q-cards/master/screenshots/am_i_responsive.JPG)<br>
 
-[Link to deployed site](https://tina-q-cards.herokuapp.com/)
+[Link to deployed site](https://tina-q-cards.onrender.com)
 
 ## UX
 
