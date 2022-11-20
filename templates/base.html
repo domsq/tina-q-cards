@@ -82,7 +82,7 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if user.is_authenticated %}
                                 {% if user.is_superuser %}
-                                <a href="https://tina-q-cards.herokuapp.com/admin/" class="dropdown-item">Admin</a>
+                                <a href="https://tina-q-cards.onrender.com/admin/" class="dropdown-item">Admin</a>
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}                            
                             <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
